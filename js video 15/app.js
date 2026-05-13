@@ -1,0 +1,4 @@
+// booleon
+// false && true = false
+// false || true = true
+ 

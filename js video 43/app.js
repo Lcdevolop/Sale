@@ -1,0 +1,1 @@
+// const new = document.getElementsByClassName('div')
