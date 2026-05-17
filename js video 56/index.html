@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .good {
+        border: 5px solid blue;
+    }
+
+    .worse {
+        border: 5px solid red;
+    }
+</style>
+
+<body>
+    <form id="form-click">
+        <input type="text" id="user" name="user">
+        <button>submit</button>
+
+        <div class="message"></div>
+    </form>
+</body>
+<script>
+    const form = document.querySelector('#form-click')
+    const regEx = /^[a-z]+$/
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+    })
+
+    form.user.addEventListener('keyup', (e) => {
+        if (regEx.test(e.target.value)) {
+            form.user.setAttribute('class', 'good')
+        } else {
+            form.user.setAttribute('class', 'worse')
+        }
+    })
+</script>
+</html>
